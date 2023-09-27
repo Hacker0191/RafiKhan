@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Smooth color animation</title>
+  <style>
+
+
+.backgroun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  color:ivory;
+  cursor:pointer;
+  left:0%;
+  width:100%;
+  background:rgb(255, 130, 130);
+  position:fixed;
+  overflow:hidden;
+  margin-left:auto;
+  margin-right:auto;
+  top:0%;
+  overflow:hidden;
+  z-index:-1;
+}
+.backgroun > .transition {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+}
+#text{
+    font-family: 'Montserrat', sans-serif;
+  position:absolute;
+  border-radius:50px;
+  padding:1%;
+   font-size:6em;
+  z-index:9999;
+  top:20%;
+ color: black;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.6px;
+  -webkit-text-stroke-color: white;
+}
+#_text{
+ color: white;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .7px;
+  -webkit-text-stroke-color: black;
+  position:absolute;
+   font-size:1.6em;
+  z-index:9999;
+  top:80%;
+}
+@media screen and (max-width: 992px) {
+#_text{
+  font-size:1.5em;
+  }
+  #text{
+  font-size:4em;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+#_text{
+  font-size:.8em;
+  }
+  #text{
+  font-size:1.8em;
+  }
+}
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+ <div class='backgroun'>
+   <span id="text">Click Anywhere</span>
+  <svg class="transition" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path class="path" stroke="#transparent" fill="#000"  dur="10s" vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z"/>
+      <animateMotion dur="9.5s" repeatCount="indefinite">
+        <mpath xlink:href="#path" />
+           <path class="path0" stroke="#transparent" fill="#fff"  dur="10s" vector-effect="non-scaling-stroke" d="M 0 100 V 100 Q 50 100 100 100 V 100 z"/>
+      <animateMotion dur="9.5s" repeatCount="indefinite">
+        <mpath xlink:href="#path0" />
+      </animateMotion>
+  </svg>
+</div>
+
+  </div>
+
+</body>
+<!-- partial -->
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+<script src='https://assets.codepen.io/16327/MorphSVGPlugin3.min.js'></script>
+<script>
+    const _random = ()=> {
+  var num = Math.round(0xffffff * Math.random());
+  var r = num >> 16;
+  var g = num >> 8 & 250;
+  var b = num & 250;
+  return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+}
+let _rand
+let _gooey
+let tl = gsap.timeline({ease:'Sine.in'})
+let click = false
+
+
+document.addEventListener('click',()=>{
+_gooey = Math.floor(Math.random() * 100);   
+  _rand = _random()
+ 
+  
+         tl.to('.path',{ attr: {d:`M ${-_gooey} 100 V ${_gooey} Q ${_gooey} 0 100 ${_gooey} V 100 z`},duration:.6,  visibility:'visible',stagger:0.01,fill:_rand,ease:Power2.easeIn})
+  
+         tl.to('.path',{ attr: {d:`M 0 100 V 0 Q ${_gooey}  0 100 0 V 100 z`},duration:.3,stagger:0.01,fill:_rand,ease:Power2.easeOut})
+tl.to('.background',{background:_rand})
+  
+            tl.to('.path',{ attr: {d:`M ${-_gooey} 100 V ${_gooey} Q ${_gooey} 0 100 ${_gooey} V 100 z`},  visibility:'hidden',stagger:0.01,fill:_rand,ease:Power2.easeIn})
+  
+         tl.to('.path',{ attr: {d:`M 0 100 V 100 Q ${_gooey}  100 100 100 V 100  z`},stagger:0.01,  visibility:'hidden',fill:_rand,ease:Power2.easeOut})
+
+
+
+
+
+})
+</script>
+</body>
+</html>
