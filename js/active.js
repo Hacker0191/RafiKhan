@@ -277,3 +277,40 @@ $('#number4').jQuerySimpleCounter({end: 246,duration: 2500});
     }, function(){
         $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
     });
+
+
+    // Preloader
+    $(document).ready(function () {
+        animateDots();
+      });
+    
+      function animateDots() {
+        var dots = $('.dot');
+    
+        function animateDot(dot, delay) {
+          setTimeout(function () {
+            dot.animate({
+              opacity: 1,
+              marginLeft: '15px'
+            }, 500, function () {
+              dot.animate({
+                opacity: 0,
+                marginLeft: '0'
+              }, 500, function() {
+                animateDot(dot, delay); // Repeat the animation
+              });
+            });
+          }, delay);
+        }
+    
+        for (var i = 0; i < dots.length; i++) {
+          animateDot($(dots[i]), i * 250); // Adjust the delay as needed
+        }
+      }
+          
+            $(window).on('load', function() {
+              // Hide the preloader when the page has completely loaded
+              $('.preloaderr').fadeOut('slow');
+            });
+
+            // About 

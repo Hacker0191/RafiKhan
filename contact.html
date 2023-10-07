@@ -16,20 +16,20 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="lds-ellipsis">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+      <!-- Preloader -->
+   <div class="preloaderr">
+    <div class="dot-container">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
     </div>
+  </div>
+
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
@@ -182,14 +182,15 @@
     </section>
     <!-- ##### Contact Area End ##### -->
 
+   
     <!-- ##### Contact Area Start ##### -->
-    <section class="contact-area section-padding-0-100">
+    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/cta.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="section-heading">
-                        <p>See what’s new</p>
-                        <h2>Get In Touch</h2>
+                    <div class="section-heading white wow fadeInUp" data-wow-delay="100ms">
+                        
+                        <h2 style="font-size: 40px;">Get In Touch</h2>
                     </div>
                 </div>
             </div>
@@ -201,26 +202,26 @@
                         <form action="#" method="post">
                             <div class="row">
                                 <div class="col-md-6 col-lg-4">
-                                    <div class="form-group">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="100ms">
                                         <input type="text" class="form-control" id="name" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4">
-                                    <div class="form-group">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="200ms">
                                         <input type="email" class="form-control" id="email" placeholder="E-mail">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="form-group">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="300ms">
                                         <input type="text" class="form-control" id="subject" placeholder="Subject">
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-group">
+                                    <div class="form-group wow fadeInUp" data-wow-delay="400ms">
                                         <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-12 text-center">
+                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="500ms">
                                     <button class="btn oneMusic-btn mt-30" type="submit">Send <i class="fa fa-angle-double-right"></i></button>
                                 </div>
                             </div>
@@ -232,14 +233,15 @@
     </section>
     <!-- ##### Contact Area End ##### -->
 
+  
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area">
         <div class="container">
             <div class="row d-flex flex-wrap align-items-center">
                 <div class="col-12 col-md-6">
-                    <a href="#"><img src="img/core-img/logo.png" alt=""></a>
-                    <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                      <a href="index.html"><img src="img/core-img/logo.png" style="height: 60px;" alt=""></a>
+                    <p class="copywrite-text" style="margin-top: 20px;"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Crafted with &nbsp;<i class="fa-solid fa-heart fa-beat" style="color: red;"></i> &nbsp;by <a href="https://themayank.in" target="_blank">Mayank Kumar</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 </div>
 
@@ -251,7 +253,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                             <li><a href="https://www.youtube.com/@rafikhanlive4027"><i class="fa-brands fa-youtube fa-2xl"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/singer-rafi-khan-70570a1a1/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a></li>
                             <li><a href="https://twitter.com/singerrafikhan1?lang=en"><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
+                           
                         </ul>
+                        <div id="google_translate_element" style="margin-top: 20px;"></div>
                     </div>
                 </div>
             </div>
@@ -259,8 +263,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </footer>
     <!-- ##### Footer Area Start ##### -->
 
-    <!-- ##### All Javascript Script ##### -->
-    <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
@@ -270,6 +272,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+   
+      
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </body>
 
 </html>
