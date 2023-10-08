@@ -534,7 +534,7 @@ img {
       height: 750px; } }
   @media only screen and (max-width: 767px) {
     .single-hero-slide {
-      height: 700px; } }
+      height: 750px; } }
   .single-hero-slide::after {
     position: absolute;
     width: 100%;
@@ -1238,7 +1238,7 @@ img {
   height: 120px; }
   @media only screen and (max-width: 767px) {
     .breadcumb-area {
-      height: 270px; } }
+      height: 100px; } }
   .breadcumb-area .bradcumbContent {
     position: absolute;
     background-color: #fff;
