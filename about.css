@@ -90,14 +90,14 @@ article {
 }
 
 .hi-1 {
-  background-image: url("./img/bg-img/about-bg.jpg");
+  background-image: url("./img/bg-img/about-bg.webp");
 }
 
 /* Add this updated media query to your existing CSS */
 
 @media (max-width: 700px), (max-device-width: 700px) {
   .hi-1 {
-    background-image: url("./img/bg-img/gallery7.jpg");
+    background-image: url("./img/bg-img/gallery7.webp");
   }
   .hero-info h1 {
     font-size: 100px; /* Adjust font size for h1 */
@@ -118,7 +118,7 @@ article {
 /* Custom Styles */
 
 .about-section {
-  background-image: url('./img/bg-img/about-hero-bg.jpg');
+  background-image: url('./img/bg-img/about-hero-bg.webp');
   background-size: cover;
   background-position: center;
   padding: 80px 0;
